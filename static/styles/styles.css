@@ -1,0 +1,115 @@
+
+body {
+    font-family: Poppins, Raleway, Arial, sans-serif;
+    text-align: center;
+    background-color: #2F3C7E;
+    margin: 0;
+    padding: 20px;
+}
+
+
+.headstatus {
+    width: 100%;
+    max-width: 850px; 
+    margin: 0 auto 25px;
+    margin-bottom: 40px; 
+    padding: 15px;
+    font-family: 'Playwrite AU SA';
+    font-size: 24px; 
+    border: 5px solid #FBEAEB;
+    border-radius: 10px;
+    color: #FBEAEB;
+    background-color: #8AAAE5;
+    text-align: center; 
+    box-sizing: border-box;
+}
+
+.link {
+    font-family: Poppins;
+    color: #FBEAEB;
+    background-color: #8AAAE5;
+    border: 2px solid #FBEAEB;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.head2 {
+    color: #FBEAEB;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #3F4C9E;
+    border-radius: 10px;
+    border: 2px solid #FBEAEB;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Poppins;
+    color: #FBEAEB;
+    background-color: #8AAAE5;
+    border: 2px solid #FBEAEB;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.labels label {
+    flex: 1;
+    text-align: left;
+    padding-right: 10px;
+}
+
+
+.labels input, .labels select {
+    flex: 2;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #FBEAEB;
+    background-color: #FBEAEB;
+}
+
+.error {
+    color: #FF4F4F;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.submit-btn {
+    background-color: #8AAAE5;
+    color: #FBEAEB;
+    border: 2px solid #FBEAEB;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #7B91D1;
+}
+
+.output, .redirect {
+    margin-top: 20px;
+    color: #FBEAEB;
+}
+
+.redirect a {
+    color: #FBEAEB;
+    text-decoration: underline;
+}
+
+.redirect a:hover {
+    text-decoration: none;
+}
