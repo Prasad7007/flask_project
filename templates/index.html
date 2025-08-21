@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div>
+    <div class="form-container">
+        <p class="labels">Getting Started? <a class="link" href="{{ url_for('signup') }}">Sign Up</a></p>
+        <p class="labels">Already Started? <a class="link" href="{{ url_for('login') }}">Login</a></p>
+    </div>
+</div>
+{% endblock content %}

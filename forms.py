@@ -1,3 +1,4 @@
+#forms.py
 import pandas as pd
 from flask_wtf import FlaskForm
 from wtforms import (
@@ -5,12 +6,20 @@ from wtforms import (
     DateField,
     TimeField,
     IntegerField,
-    SubmitField
+    SubmitField,
+    StringField,
+    BooleanField,
+    PasswordField
 )
-from wtforms.validators import DataRequired
+from wtforms.validators import (
+    DataRequired,
+    Length,
+    Email,
+    Optional,
+    EqualTo
+)
 
-
-# getting the data
+# Load data for form choices
 train = pd.read_csv("data/train.csv")
 val = pd.read_csv("data/val.csv")
 X_data = pd.concat([train, val], axis=0).drop(columns="price")
@@ -57,3 +66,43 @@ class InputForm(FlaskForm):
         validators=[DataRequired()]
     )
     submit = SubmitField("Predict")
+
+class SignupForm(FlaskForm):
+    username = StringField(
+        "Username",
+        validators=[DataRequired(), Length(2, 30)]
+    )
+    email = StringField(
+        "Email",
+        validators=[DataRequired(), Email()]
+    )
+    gender = SelectField(
+        "Gender",
+        choices=["Male", "Female", "Other"],
+        validators=[Optional()]
+    )
+    dob = DateField(
+        "Date of Birth",
+        validators=[Optional()]
+    )
+    password = PasswordField(
+        "Password",
+        validators=[DataRequired(), Length(8, 30)]
+    )
+    confirm_password = PasswordField(
+        "Confirm Password",
+        validators=[DataRequired(), EqualTo("password", message="Passwords must match")]
+    )
+    submit = SubmitField("Sign Up")
+
+class LoginForm(FlaskForm):
+    email = StringField(
+        "Email",
+        validators=[DataRequired(), Email()]
+    )
+    password = PasswordField(
+        "Password",
+        validators=[DataRequired(), Length(8, 30)]
+    )
+    remember_me = BooleanField("Remember Me")
+    submit = SubmitField("Login")

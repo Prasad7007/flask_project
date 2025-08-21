@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="form-container">
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+
+        <div class="labels">
+            <label for="email">{{ form.email.label }}</label>
+            {{ form.email }}
+            {% if form.email.errors %}
+                <div class="error">{{ form.email.errors[0] }}</div>
+            {% endif %}
+        </div>
+
+        <div class="labels">
+            <label for="password">{{ form.password.label }}</label>
+            {{ form.password }}
+            {% if form.password.errors %}
+                <div class="error">{{ form.password.errors[0] }}</div>
+            {% endif %}
+        </div>
+
+        <div class="labels">
+            {{ form.remember_me }}
+            {{ form.remember_me.label }}
+        </div>
+
+        <button type="submit" class="submit-btn">{{ form.submit() }}</button>
+    </form>
+</div>
+{% endblock content %}

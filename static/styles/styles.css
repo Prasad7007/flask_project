@@ -1,26 +1,24 @@
-
 body {
     font-family: Poppins, Raleway, Arial, sans-serif;
     text-align: center;
-    background-color: #2F3C7E;
+    background-color: #ffffff;
     margin: 0;
     padding: 20px;
 }
 
-
 .headstatus {
     width: 100%;
-    max-width: 850px; 
+    max-width: 850px;
     margin: 0 auto 25px;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
     padding: 15px;
     font-family: 'Playwrite AU SA';
-    font-size: 24px; 
-    border: 5px solid #FBEAEB;
+    font-size: 24px;
+    border: 5px solid #4752e3;
     border-radius: 10px;
     color: #FBEAEB;
     background-color: #8AAAE5;
-    text-align: center; 
+    text-align: center;
     box-sizing: border-box;
 }
 
@@ -35,7 +33,9 @@ body {
 }
 
 .head2 {
-    color: #FBEAEB;
+    color: #4444ce;
+    margin-bottom: 40px;
+    font-size: larger;
 }
 
 .form-container {
@@ -44,7 +44,7 @@ body {
     padding: 20px;
     background-color: #3F4C9E;
     border-radius: 10px;
-    border: 2px solid #FBEAEB;
+    border: 2px solid #5c5eee;
 }
 
 .labels {
@@ -59,7 +59,7 @@ body {
     padding: 10px;
     margin: 10px 0;
     width: 100%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .labels label {
@@ -67,7 +67,6 @@ body {
     text-align: left;
     padding-right: 10px;
 }
-
 
 .labels input, .labels select {
     flex: 2;
@@ -84,7 +83,6 @@ body {
     margin-left: 5px;
     margin-right: 5px;
 }
-
 
 .submit-btn {
     background-color: #8AAAE5;
@@ -113,3 +111,4 @@ body {
 .redirect a:hover {
     text-decoration: none;
 }
+

@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="form-container">
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+
+        <div class="labels">
+            <label for="username">{{ form.username.label }}</label>
+            {{ form.username }}
+            {% if form.username.errors %}
+                <div class="error">{{ form.username.errors[0] }}</div>
+            {% endif %}
+        </div>
+
+        <div class="labels">
+            <label for="email">{{ form.email.label }}</label>
+            {{ form.email }}
+            {% if form.email.errors %}
+                <div class="error">{{ form.email.errors[0] }}</div>
+            {% endif %}
+        </div>
+
+        <div class="labels">
+            <label for="gender">{{ form.gender.label }}</label>
+            {{ form.gender }}
+        </div>
+
+        <div class="labels">
+            <label for="dob">{{ form.dob.label }}</label>
+            {{ form.dob }}
+        </div>
+
+        <div class="labels">
+            <label for="password">{{ form.password.label }}</label>
+            {{ form.password }}
+            {% if form.password.errors %}
+                <div class="error">{{ form.password.errors[0] }}</div>
+            {% endif %}
+        </div>
+
+        <div class="labels">
+            <label for="confirm_password">{{ form.confirm_password.label }}</label>
+            {{ form.confirm_password }}
+            {% if form.confirm_password.errors %}
+                <div class="error">{{ form.confirm_password.errors[0] }}</div>
+            {% endif %}
+        </div>
+
+        <button type="submit" class="submit-btn">{{ form.submit() }}</button>
+    </form>
+</div>
+{% endblock content %}
