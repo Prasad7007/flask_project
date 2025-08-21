@@ -20,8 +20,8 @@ from wtforms.validators import (
 )
 
 # Load data for form choices
-train = pd.read_csv("data/train.csv")
-val = pd.read_csv("data/val.csv")
+train = pd.read_csv("Data/train.csv")
+val = pd.read_csv("Data/val.csv")
 X_data = pd.concat([train, val], axis=0).drop(columns="price")
 
 class InputForm(FlaskForm):
